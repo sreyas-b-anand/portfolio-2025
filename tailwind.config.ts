@@ -9,9 +9,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        backgroundStart: "#11071F",
+        backgroundMid: "#130921",
+        backgroundEnd: "#130E1A",
+        text: "#FFD700",
+        primary: "#5A189A",
+        secondary: "#7B2CBF",
+        hover: "#9D4EDD",
       },
+      keyframes: {
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
+      animation: {
+        gradient: 'gradient 10s ease infinite',
+      },
+      
     },
   },
   plugins: [],
