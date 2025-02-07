@@ -50,27 +50,23 @@ const Projects = () => {
   const projects = [tasker, grammr, faux, eventOn];
   return (
     <>
-      <div
-        id="projects"
-        className="w-screen h-screen flex flex-col justify-center items-center m-4"
-      >
-        <div className="absolute z-0">
-          <h1 className="w-screen text-inherit text-center text-9xl font-bold tracking-[6rem] opacity-[0.01]  ">
-            MY PROJECTS
-          </h1>
-        </div>
 
-        <div className="absolute z-10 w-screen h-screen flex flex-col justify-center items-center">
-          <motion.div className="flex flex-col gap-10 items-center justify-center">
+
+        <div id="projects" className=" w-screen min-h-screen p-5 flex flex-col justify-center items-center">
+        <motion.div className="flex flex-col gap-10 items-center justify-center">
             <motion.div className="text-4xl font-bold  ">Projects</motion.div>
+
             {projects.map((project) => (
               <ProjectCard key={project.id} {...project} />
             ))}
           </motion.div>
         </div>
-      </div>
+
     </>
   );
 };
 
 export default Projects;
+
+
+/**/

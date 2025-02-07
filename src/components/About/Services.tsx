@@ -27,7 +27,7 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-3xl font-bold text-center text-violet-200"
           >
-            Services
+            What I offer
           </motion.h2>
           <div className="h-1 rounded-full w-0 group-hover:w-32 transition-all duration-300 bg-violet-100" />
         </div>
