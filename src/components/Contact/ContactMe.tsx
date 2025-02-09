@@ -5,10 +5,7 @@ import SocialLinks from "./SocialLinks";
 
 const ContactMe = () => {
   return (
-    <section
-      id="contact"
-      className="relative min-h-screen w-full py-20"
-    >
+    <section id="contact" className="relative min-h-screen w-full py-20">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-white/[0.02] -z-0" />
 
@@ -38,17 +35,13 @@ const ContactMe = () => {
         <div className="max-w-4xl mx-auto">
           {/* Contact Card */}
           <div className=" rounded-2xl ">
-           
             {/* Form Section */}
             <div className="w-full max-w-2xl mx-auto flex justify-center">
               <Form />
             </div>
-            
           </div>
         </div>
       </motion.div>
-
-     
     </section>
   );
 };
