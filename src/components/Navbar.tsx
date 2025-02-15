@@ -13,16 +13,28 @@ const Navbar = () => {
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
+  document.documentElement.addEventListener("touchstart", ()=>{
+    setSidebarOpen(false)
+  });
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 shadow-md bg-[#200d33]">
-        <div className="flex items-center justify-between px-10 py-5">
+        <div className="flex items-center justify-around px-10"> 
+        <div className="flex items-center justify-between  py-4 w-full px-8">
           <header className="flex items-center justify-center gap-3 ">
-            <Image className="rounded-full hidden md:block" src={'/icons/logo.png'} alt="" width={40} height={40}/>
-            <p className="text-2xl font-semibold md:font-bold text-white">Sreyas B Anand</p>
+            <Image
+              className="rounded-full hidden md:block"
+              src={"/icons/logo.png"}
+              alt=""
+              width={40}
+              height={40}
+            />
+            <p className="text-2xl font-semibold md:font-bold text-white">
+              Sreyas B Anand
+            </p>
           </header>
 
-          <div className="hidden md:flex items-center justify-center gap-8">
+          <div className="hidden md:flex items-center justify-evenly gap-5 mr-28">
             <a
               className="hover:cursor-pointer text-[17px] hover:opacity-100 opacity-80 text-white"
               role="button"
@@ -61,12 +73,20 @@ const Navbar = () => {
               Resume
             </button>
           </div>
-          <div className="block md:hidden hover:cursor-pointer">
-            <button><Menu onClick={toggleSidebar} /></button>
-          </div>
+        </div>
+        <div className="block md:hidden hover:cursor-pointer">
+          <button>
+            <Menu onClick={toggleSidebar} />
+          </button>
+        </div>
         </div>
       </nav>
-      {isSidebarOpen && <Sidebar isSideBarOpen={isSidebarOpen} setIsSideBarOpen={setSidebarOpen} />} 
+      {isSidebarOpen && (
+        <Sidebar
+          isSideBarOpen={isSidebarOpen}
+          setIsSideBarOpen={setSidebarOpen}
+        />
+      )}
     </>
   );
 };
