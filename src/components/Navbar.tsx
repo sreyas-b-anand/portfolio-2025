@@ -6,6 +6,7 @@ import { Download } from "lucide-react";
 import { downloadResume } from "@/utils/DownloadFile";
 import { Menu } from "lucide-react";
 import Sidebar from "@/components/Sidebar"; // Import the Sidebar component
+import Image from "next/image";
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -16,8 +17,9 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-50 shadow-md bg-[#200d33]">
         <div className="flex items-center justify-between px-10 py-5">
-          <header className="flex items-center justify-center text-2xl font-semibold md:font-bold text-white">
-            Sreyas B Anand
+          <header className="flex items-center justify-center gap-3 ">
+            <Image className="rounded-full hidden md:block" src={'/icons/logo.png'} alt="" width={40} height={40}/>
+            <p className="text-2xl font-semibold md:font-bold text-white">Sreyas B Anand</p>
           </header>
 
           <div className="hidden md:flex items-center justify-center gap-8">
