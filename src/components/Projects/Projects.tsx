@@ -1,8 +1,8 @@
 "use client";
-import grammrImg from "/public/grammr.jpg";
-import fauxImg from "/public/faux.png";
-import eventOnImg from "/public/eventon.png";
-import taskerImg from "/public/tasker.jpg";
+import grammrImg from "/public/projects/grammr.jpg";
+import fauxImg from "/public/projects/faux.png";
+import eventOnImg from "/public/projects/eventon.png";
+import taskerImg from "/public/projects/tasker.jpg";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
@@ -50,23 +50,24 @@ const Projects = () => {
   const projects = [tasker, grammr, faux, eventOn];
   return (
     <>
-
-
-        <div id="projects" className=" w-screen min-h-screen p-5 flex flex-col justify-center items-center">
+      <div
+        id="projects"
+        className=" w-screen min-h-screen p-5 flex flex-col justify-center items-center pt-40  "
+      >
         <motion.div className="flex flex-col gap-10 items-center justify-center">
-            <motion.div className="text-4xl font-bold  ">Projects</motion.div>
-
-            {projects.map((project) => (
-              <ProjectCard key={project.id} {...project} />
-            ))}
+          <motion.div className="text-5xl font-bold  mb-10">
+            Projects
           </motion.div>
-        </div>
 
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </motion.div>
+      </div>
     </>
   );
 };
 
 export default Projects;
-
 
 /**/

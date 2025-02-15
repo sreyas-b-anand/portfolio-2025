@@ -34,7 +34,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <div id="home" className=" flex flex-col-reverse md:flex-row items-center justify-evenly max-w-screen mx-auto px-4 min-h-screen py-32">
+    <div id="home" className=" flex flex-col-reverse md:flex-row items-center justify-evenly max-w-screen mx-auto px-4 min-h-screen py-32 sm:pt-40">
       {/* Left Content */}
       <div className="space-y-10">
         <motion.div
@@ -42,12 +42,12 @@ const Intro = () => {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-2"
         >
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 px-3">
             <div className="h-1 w-10 bg-violet-500 rounded-full" />
             <p className="text-violet-400 font-medium">Portfolio</p>
           </div>
 
-          <h1 className="text-7xl font-bold tracking-tight">
+          <h1 className="text-6xl font-bold tracking-tight px-3 sm:text-7xl">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -68,7 +68,7 @@ const Intro = () => {
         </motion.div>
 
         <motion.div
-          className="space-y-6"
+          className="space-y-6 px-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
@@ -123,11 +123,12 @@ const Intro = () => {
           <div className="absolute -inset-2 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg opacity-0 group-hover:opacity-20 transition-all duration-500 blur-xl" />
           <div className="relative w-[200px] h-[200px] rounded-full sm:w-[320px] sm:h-[320px] md:rounded-lg overflow-hidden border border-white/10">
             <Image
-              src="/photo.jpg"
+              src="/me/photo.jpg"
               alt="Sreyas B Anand"
               fill
               className="object-cover group-hover:scale-105 transition-all duration-500"
               priority
+              sizes="auto auto"
             />
           </div>
         </div>

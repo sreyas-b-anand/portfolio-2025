@@ -30,6 +30,7 @@ const ProjectCard = ({
         {/* Image Section */}
         <div className="relative w-full md:w-[40%] h-[200px] md:h-auto overflow-hidden">
           <Image
+          sizes="auto auto"
             src={imageUrl}
             alt={header}
             fill

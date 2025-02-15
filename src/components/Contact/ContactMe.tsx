@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 
 const ContactMe = () => {
   return (
-    <section id="contact" className="relative min-h-screen w-full py-20">
+    <section id="contact" className=" min-h-screen w-screen py-20 pt-40">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-white/[0.02] -z-0" />
 
@@ -13,20 +13,20 @@ const ContactMe = () => {
       <SocialLinks />
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 20}}
         whileInView={{ opacity: 1, y: 0 }}
-        className="relative z-10 container mx-auto px-4"
+        className="relative z-10 container mx-auto"
       >
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold text-white mb-4"
+           
           >
-            Get In Touch
+            <p  className="text-5xl font-bold text-white mb-4">Get In Touch</p>
           </motion.h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p className="text-gray-400 max-w-xl mx-auto px-4 pt-3">
             Feel free to reach out for collaborations or just a friendly hello
           </p>
         </div>

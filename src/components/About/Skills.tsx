@@ -145,15 +145,15 @@ const Skills = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-20 flex flex-col gap-16 items-center justify-center">
       <div className="flex items-center justify-start flex-col group gap-1 mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl font-bold text-center text-violet-200"
-          >
-            What I know
-          </motion.h2>
-          <div className="h-1 rounded-full w-0 group-hover:w-20 transition-all duration-300 bg-violet-100" />
-        </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-3xl font-bold text-center text-violet-200"
+        >
+          What I know
+        </motion.h2>
+        <div className="h-1 rounded-full w-0 group-hover:w-40 transition-all duration-300 bg-violet-100" />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         {["Frontend", "Backend", "Tools", "Languages"].map((category) => (
