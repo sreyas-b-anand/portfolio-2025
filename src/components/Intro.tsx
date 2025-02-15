@@ -31,7 +31,7 @@ const Intro = () => {
       setCurrentRole(roles[randomIndex]);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles]);
 
   return (
     <div id="home" className=" flex flex-col-reverse md:flex-row items-center justify-evenly max-w-screen mx-auto px-4 min-h-screen py-32 sm:pt-40">

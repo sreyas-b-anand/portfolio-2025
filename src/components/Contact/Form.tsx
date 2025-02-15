@@ -37,7 +37,7 @@ const Form = () => {
           //alert("Message sent!");
         },
         (error : Error) => {
-          //console.error("Failed to send email:", error);
+          console.error("Failed to send email:", error);
           //alert("Failed to send email. Please try again.");
         }
       );
