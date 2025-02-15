@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { scrollToSection } from "@/utils/ScrollToView";
 import { Download } from "lucide-react";
 import { downloadResume } from "@/utils/DownloadFile";
@@ -13,9 +13,11 @@ const Navbar = () => {
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
-  document.documentElement.addEventListener("touchstart", ()=>{
-    setSidebarOpen(false)
-  });
+  useEffect(()=>{
+    document.documentElement.addEventListener("touchstart", ()=>{
+      setSidebarOpen(false)
+    });
+  } , [])
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 shadow-md bg-[#200d33]">
