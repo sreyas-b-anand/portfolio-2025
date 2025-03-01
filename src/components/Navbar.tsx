@@ -36,7 +36,7 @@ const Navbar = () => {
             </p>
           </header>
 
-          <div className="hidden md:flex items-center justify-evenly gap-5 mr-28">
+          <div className="hidden lg:flex items-center justify-evenly gap-5 mr-28">
             <a
               className="hover:cursor-pointer text-[17px] hover:opacity-100 opacity-80 text-white"
               role="button"
@@ -66,7 +66,7 @@ const Navbar = () => {
               Contact
             </a>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <button
               className="flex items-center justify-center gap-2 opacity-80 border-2 border-white text-white hover:cursor-pointer hover:opacity-100 px-3 py-2 rounded-lg transition-opacity duration-300"
               onClick={downloadResume}
@@ -76,7 +76,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        <div className="block md:hidden hover:cursor-pointer">
+        <div className="block lg:hidden hover:cursor-pointer">
           <button>
             <Menu onClick={toggleSidebar} />
           </button>
