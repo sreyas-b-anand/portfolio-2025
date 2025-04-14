@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
+import Loader from "./Loader/Loader";
 
 const Intro = () => {
   const roles = ["Mern Stack Developer", "UI/UX Designer", "ML enthusiast"];
@@ -34,7 +35,10 @@ const Intro = () => {
   }, [roles]);
 
   return (
-    <div id="home" className=" flex flex-col-reverse md:flex-row items-center justify-evenly max-w-screen mx-auto px-4 min-h-screen py-32 sm:pt-40">
+    <div
+      id="home"
+      className=" flex flex-col-reverse md:flex-row items-center justify-evenly max-w-screen mx-auto px-4 min-h-screen py-32 sm:pt-40 overflow-hidden"
+    >
       {/* Left Content */}
       <div className="space-y-10">
         <motion.div
@@ -122,14 +126,16 @@ const Intro = () => {
         <div className="relative group">
           <div className="absolute -inset-2 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg opacity-0 group-hover:opacity-20 transition-all duration-500 blur-xl" />
           <div className="relative w-[200px] h-[200px] rounded-full sm:w-[320px] sm:h-[320px] md:rounded-lg overflow-hidden border border-white/10">
+            <Suspense fallback={<Loader/>}>
             <Image
+              loading="lazy"
               src="/me/photo.jpg"
               alt="Sreyas B Anand"
               fill
               className="object-cover group-hover:scale-105 transition-all duration-500"
-              priority
               sizes="auto auto"
             />
+            </Suspense>
           </div>
         </div>
       </motion.div>

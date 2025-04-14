@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative min-h-screen flex items-center justify-center py-20 w-screen flex-col mb-2 pt-40"
+      className="relative overflow-hidden min-h-screen flex items-center justify-center py-20 w-screen flex-col mb-2 pt-40"
     >
       <div className="absolute  w-screen hidden sm:flex items-center justify-center z-0 overflow-hidden">
         <p className="text-9xl text-center font-bold tracking-[8rem] opacity-[0.008] drop-shadow-md px-10">

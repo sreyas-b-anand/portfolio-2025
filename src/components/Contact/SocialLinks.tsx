@@ -41,7 +41,7 @@ const socialLinks = [
 function SocialLinks() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -20 }}
+      initial={{ opacity: 0, x: 20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       className=" fixed left-4 bottom-0 z-20 hidden lg:flex flex-col gap-4 items-center"
@@ -49,9 +49,9 @@ function SocialLinks() {
       {socialLinks.map((social, index) => (
         <motion.div
           key={social.name}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.01 }}
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: index * 0.1 }}
           whileHover={{ x: 5, scale: 1.1 }}
         >
           <Link

@@ -1,15 +1,15 @@
 "use client";
 import grammrImg from "/public/projects/grammr.jpg";
 import fauxImg from "/public/projects/faux.png";
-import eventOnImg from "/public/projects/eventon.png";
-import taskerImg from "/public/projects/tasker.jpg";
+import bidsnapImg from "/public/projects/bidsnap.png";
 import { motion } from "framer-motion";
+import privyImage from "/public/projects/privy.png";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   const grammr = {
     header: "Grammr",
-    desc: "I have created a simple grammar checker using the Gemini API.",
+    desc: "I have created a grammar checker using the Gemini API.",
     gitlink: "https://github.com/sreyas-b-anand/grammr",
     weblink: "https://grammr.vercel.app/",
 
@@ -28,26 +28,26 @@ const Projects = () => {
     techStack: ["Chrome extension", "Tensorflow", "html", "css", "js"],
   };
 
-  const eventOn = {
-    header: "eventOn",
-    desc: "I have created a dynamic event calendar application.",
-    gitlink: "https://github.com/sreyas-b-anand/eventOn",
-    weblink: "https://event-on.vercel.app/",
+  const privy = {
+    header: "Privy",
+    desc: "Ephemeral & Encrypted Messaging Platform.",
+    gitlink: "https://github.com/ABHAY-100/fosshack-privy",
+    weblink: "https://privy.abhayyy.tech/",
     id: 3,
-    imageUrl: eventOnImg,
+    imageUrl: privyImage,
 
     techStack: ["React", "Tailwind CSS", "Shadcn UI", "TypeScript"],
   };
-  const tasker = {
-    header: "Tasker",
-    desc: "I have created a simple to-do app using MERN stack.",
-    gitlink: "https://github.com/sreyas-b-anand/todo-mern",
-    weblink: "https://todo-mern-pearl.vercel.app",
+  const bidsnap = {
+    header: "BidSnap",
+    desc: "I have created online auction system using React , Flask , MySql.",
+    gitlink: "https://github.com/sreyas-b-anand/dbms-mini-project",
+    weblink: "https://github.com/sreyas-b-anand/dbms-mini-project",
     id: 4,
-    imageUrl: taskerImg,
-    techStack: ["MERN", "Chakra UI", "Tailwind CSS"],
+    imageUrl: bidsnapImg,
+    techStack: ["React", "Python", "MySql", "Flask"],
   };
-  const projects = [tasker, grammr, faux, eventOn];
+  const projects = [bidsnap, grammr, faux, privy];
   return (
     <>
       <div
