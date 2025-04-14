@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { GrMysql } from "react-icons/gr";
+
 import {
   FaReact,
   FaNodeJs,
@@ -10,6 +12,7 @@ import {
   FaHtml5,
   FaCss3Alt,
 } from "react-icons/fa";
+import { BiLogoFlask } from "react-icons/bi";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -75,6 +78,16 @@ const Skills = () => {
       name: "MongoDB",
       category: "Backend",
       icon: <SiMongodb className="text-[#47A248]" />,
+    },
+    {
+      name: "Flask",
+      category: "Backend",
+      icon: <BiLogoFlask className="text-[#ffff]" />,
+    },
+    {
+      name: "MySQL",
+      category: "Backend",
+      icon: <GrMysql className="text-[#ffff]" />,
     },
     {
       name: "REST APIs",

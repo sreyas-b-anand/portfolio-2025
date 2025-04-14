@@ -132,7 +132,7 @@ const Intro = () => {
               src="/me/photo.jpg"
               alt="Sreyas B Anand"
               fill
-              className="object-cover group-hover:scale-105 transition-all duration-500"
+              className="object-fill group-hover:scale-105 transition-all duration-500"
               sizes="auto auto"
             />
             </Suspense>
