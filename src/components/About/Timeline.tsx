@@ -17,7 +17,7 @@ const Timeline = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.02 }}
-      className="flex items-center justify-center gap-3 bg-transparent px-4 py-2 rounded-xl group"
+      className="flex items-center justify-center gap-3 bg-transparent px-4 py-2 rounded-xl group hover:cursor-pointer"
     >
       <motion.div
         className="text-white/70 p-8 rounded-xl text-xl bg-violet-500/20 border border-violet-500/30 backdrop-blur-sm

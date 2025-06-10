@@ -2,11 +2,21 @@
 import grammrImg from "/public/projects/grammr.jpg";
 import fauxImg from "/public/projects/faux.png";
 import bidsnapImg from "/public/projects/bidsnap.png";
-import { motion } from "framer-motion";
 import privyImage from "/public/projects/privy.png";
+import bunkrImg from "/public/projects/bunkr.png";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
+  const bunkr = {
+    header: "Bunkr",
+    desc: "A modern alternative to Ezygo, our college's third-party legacy attendance system, built to offer a cleaner and more intuitive user experience.",
+    gitlink: "https://github.com/ABHAY-100/bunkr-web",
+    weblink: "https://bunkr-web.vercel.app/",
+    id: 0,
+    imageUrl: bunkrImg,
+    techStack: ["Next.js", "Tailwind CSS", "Typescript", "Supabase"],
+  };
   const grammr = {
     header: "Grammr",
     desc: "I have created a grammar checker using the Gemini API.",
@@ -36,7 +46,7 @@ const Projects = () => {
     id: 3,
     imageUrl: privyImage,
 
-    techStack: ["React", "Tailwind CSS", "Shadcn UI", "TypeScript"],
+    techStack: ["Next JS", "Express JS", "socket.io", "JavaScript"],
   };
   const bidsnap = {
     header: "BidSnap",
@@ -47,7 +57,7 @@ const Projects = () => {
     imageUrl: bidsnapImg,
     techStack: ["React", "Python", "MySql", "Flask"],
   };
-  const projects = [bidsnap, grammr, faux, privy];
+  const projects = [bidsnap, bunkr, grammr, faux, privy];
   return (
     <>
       <div
@@ -69,5 +79,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-/**/

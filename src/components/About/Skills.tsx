@@ -22,6 +22,9 @@ import {
   SiPostman,
   SiCplusplus,
   SiC,
+  SiAndroidstudio,
+  SiDocker,
+  SiSupabase,
 } from "react-icons/si";
 
 import { BiLogoFigma } from "react-icons/bi";
@@ -29,6 +32,8 @@ import { TbBrandVscode, TbBrandCSharp } from "react-icons/tb";
 import { FaJs } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
 import { IoLogoFirebase } from "react-icons/io5";
+import { FaFlutter } from "react-icons/fa6";
+import { DiDart } from "react-icons/di";
 const Skills = () => {
   const skills = [
     // Frontend
@@ -102,6 +107,11 @@ const Skills = () => {
       icon: <FaGitAlt className="text-[#F05032]" />,
     },
     {
+      name: "Docker",
+      category: "Tools",
+      icon: <SiDocker color="#00BFFF" />,
+    },
+    {
       name: "VS Code",
       category: "Tools",
       icon: <TbBrandVscode className="text-[#007ACC]" />,
@@ -120,6 +130,11 @@ const Skills = () => {
       name: "Firebase",
       category: "Tools",
       icon: <IoLogoFirebase className="text-[#FFA611]" />,
+    },
+    {
+      name: "Supabase",
+      category: "Tools",
+      icon: <SiSupabase className="text-[#3ECF8E]" />,
     },
     // Languages
     {
@@ -153,6 +168,21 @@ const Skills = () => {
       category: "Languages",
       icon: <TbBrandCSharp className="text-[#00599C]" />,
     },
+    {
+      name: "Flutter",
+      category: "App Development",
+      icon: <FaFlutter color="#00BFFF" />,
+    },
+    {
+      name: "Dart",
+      category: "App Development",
+      icon: <DiDart color="#00BFFF" />,
+    },
+    {
+      name: "Andriod Studio",
+      category: "App Development",
+      icon: <SiAndroidstudio color="#00BFFF" />,
+    },
   ];
 
   return (
@@ -169,44 +199,46 @@ const Skills = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-        {["Frontend", "Backend", "Tools", "Languages"].map((category) => (
-          <motion.div
-            key={category}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="relative "
-          >
-            <div className="absolute -left-4 top-0 w-1 h-full bg-violet-500/20 rounded-md" />
-            <h3 className="text-xl font-semibold text-violet-400 mb-8 flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-violet-500" />
-              {category}
-            </h3>
+        {["Frontend", "Backend", "Tools", "Languages", "App Development"].map(
+          (category) => (
+            <motion.div
+              key={category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="relative "
+            >
+              <div className="absolute -left-4 top-0 w-1 h-full bg-violet-500/20 rounded-md" />
+              <h3 className="text-xl font-semibold text-violet-400 mb-8 flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-violet-500" />
+                {category}
+              </h3>
 
-            <div className="grid grid-cols-2 gap-6">
-              {skills
-                .filter((skill) => skill.category === category)
-                .map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="group relative hover:cursor-pointer "
-                  >
-                    <div className="absolute -inset-2 bg-violet-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="relative p-4 rounded-xl bg-white/5 border border-white/10 hover:border-violet-500/50 transition-all">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl">{skill.icon}</span>
-                        <span className="text-sm font-medium text-white/80 group-hover:text-violet-400 transition-colors">
-                          {skill.name}
-                        </span>
+              <div className="grid grid-cols-2 gap-6">
+                {skills
+                  .filter((skill) => skill.category === category)
+                  .map((skill, index) => (
+                    <motion.div
+                      key={skill.name}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="group relative hover:cursor-pointer "
+                    >
+                      <div className="absolute -inset-2 bg-violet-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="relative p-4 rounded-xl bg-white/5 border border-white/10 hover:border-violet-500/50 transition-all">
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">{skill.icon}</span>
+                          <span className="text-sm font-medium text-white/80 group-hover:text-violet-400 transition-colors">
+                            {skill.name}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
-            </div>
-          </motion.div>
-        ))}
+                    </motion.div>
+                  ))}
+              </div>
+            </motion.div>
+          )
+        )}
       </div>
     </div>
   );
