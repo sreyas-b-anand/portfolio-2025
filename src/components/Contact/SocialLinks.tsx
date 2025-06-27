@@ -51,7 +51,7 @@ function SocialLinks() {
           key={social.name}
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.1 }}
+          transition={{ delay: index * 0.04 }}
           whileHover={{ x: 5, scale: 1.1 }}
         >
           <Link

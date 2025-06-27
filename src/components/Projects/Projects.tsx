@@ -4,6 +4,7 @@ import fauxImg from "/public/projects/faux.png";
 import bidsnapImg from "/public/projects/bidsnap.png";
 import privyImage from "/public/projects/privy.png";
 import bunkrImg from "/public/projects/bunkr.png";
+import sentigoImg from "/public/projects/sentigo.png";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
@@ -26,6 +27,15 @@ const Projects = () => {
     id: 1,
     imageUrl: grammrImg,
     techStack: ["Next.js", "Gemini API", "Tailwind CSS"],
+  };
+  const sentigo = {
+    header: "Sentigo",
+    desc: "A mobile application designed to analyze user emotions and provide personalized recommendations.",
+    gitlink: "https://github.com/sreyas-b-anand/sentigo",
+    weblink: "https://github.com/sreyas-b-anand/sentigo",
+    id: 5,
+    imageUrl: sentigoImg,
+    techStack: ["Flutter", "Dart","Python", "Docker" , "scikit-learn"],
   };
 
   const faux = {
@@ -57,7 +67,7 @@ const Projects = () => {
     imageUrl: bidsnapImg,
     techStack: ["React", "Python", "MySql", "Flask"],
   };
-  const projects = [bidsnap, bunkr, grammr, faux, privy];
+  const projects = [bidsnap, bunkr, faux, privy , sentigo , grammr];
   return (
     <>
       <div
