@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Loader from "./Loader/Loader";
 
 const Intro = () => {
-  const roles = ["Mern Stack Developer", "UI/UX Designer", "ML enthusiast"];
+  const roles = useMemo(() => ["Mern Stack Developer", "UI/UX Designer", "ML enthusiast"], []);
   const [currentRole, setCurrentRole] = useState(roles[0]);
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -129,7 +129,7 @@ const Intro = () => {
             <Suspense fallback={<Loader/>}>
             <Image
               loading="lazy"
-              src="/me/photo.jpg"
+              src="/me/me.jpg"
               alt="Sreyas B Anand"
               fill
               className="object-fill group-hover:scale-105 transition-all duration-500"
